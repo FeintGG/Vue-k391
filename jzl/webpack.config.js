@@ -9,8 +9,7 @@ module.exports = {
     filename: 'build.js'
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.css$/,
         use: [
           'vue-style-loader',
@@ -66,12 +65,23 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.(png)|(jpg)|(gif)|(woff)|(svg)|(eot)|(ttf)$/,
+        use: [{
+          loader: "url-loader",
+          options: {
+            limit: 50000, //小于50K的 都打包
+            name: "[hash:8].[name].[ext]",
+          }
+        }]
       }
     ]
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js',
+      '@':path.resolve('src')
     },
     extensions: ['*', '.js', '.vue', '.json']
   },
