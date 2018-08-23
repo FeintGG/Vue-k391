@@ -20,6 +20,17 @@ const router = new VueRouter({
   mode: 'hash'
 });
 
+
+Vue.mixin({
+  data(){
+    return {
+      get globalUrlPrefix(){
+        return "http://localhost:3000";
+      }
+    }
+  }
+})
+
 new Vue({
   el: '#app',
   router,

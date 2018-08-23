@@ -22,13 +22,14 @@ export default [
     },
 
     {
-        path:'/cate',
-        component: Cate
+        path:'/news/:newsId/comment',
+        component: Comment,
+        name: 'commentPage'
     },
 
     {
-        path:'/comment',
-        component: Comment
+        path:'/cate',
+        component: Cate
     },
 
     {

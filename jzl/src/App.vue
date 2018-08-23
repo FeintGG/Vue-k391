@@ -8,11 +8,11 @@
       <el-submenu index="1">
         <template slot="title"><i class="el-icon-menu"></i>基础模块</template>
         <el-menu-item-group>
-          <el-menu-item index="1-1"><router-link to="/">首页</router-link></el-menu-item>
-          <el-menu-item index="1-2"><router-link to="/user">用户管理</router-link></el-menu-item>
-          <el-menu-item index="1-3"><router-link to="/news">新闻管理</router-link></el-menu-item>
-          <el-menu-item index="1-4"><router-link to="/cate">分类管理</router-link></el-menu-item>
-          <el-menu-item index="1-5"><router-link to="/comment">评论管理</router-link></el-menu-item>
+          <el-menu-item index="1-1"><router-link to="/" active-class="active" exact>首页</router-link></el-menu-item>
+          <el-menu-item index="1-2"><router-link to="/user" active-class="active">用户管理</router-link></el-menu-item>
+          <el-menu-item index="1-3"><router-link to="/news" active-class="active">新闻管理</router-link></el-menu-item>
+          <el-menu-item index="1-4"><router-link to="/cate" active-class="active">分类管理</router-link></el-menu-item>
+          <el-menu-item index="1-5"><router-link to="/comment" active-class="active">评论管理</router-link></el-menu-item>
           </el-menu-item-group>
 
       </el-submenu>
@@ -35,7 +35,7 @@
           <el-dropdown-item>查看</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
-      <span>Jzl</span>
+      <span class="jzl">Jzl</span>
   </el-header>
   <el-main>
     <router-view></router-view>
@@ -89,7 +89,7 @@ a {
   width:237px !important;
 }
  .el-header {
-    background-color: #B3C0D1;
+    background:url(http://www.digiscenery.com/wp-content/uploads/2014/09/yinhe.jpg) center;
     color: #333;
     line-height: 60px;
   }
@@ -108,13 +108,32 @@ a {
     background-color: #B3C0D1;
     line-height: 60px;
     font-size: 15px;
-    color:#1660cf;
+    color:#ddd;
     text-align: center;
     font-size: 20px;
+    background: url(http://www.digiscenery.com/wp-content/uploads/2014/09/yinhe.jpg) left center;
   }
   .el-menu-item-group{
       box-sizing: border-box;
      
       margin-right: 8px;
   }
+  .active{
+    color:#d26c84
+  }
+
+  a{
+    text-decoration: none;
+  }
+  .is-active{
+    background:rgba($color:#dbedff, $alpha: 0.6)
+  }
+  .jzl{
+    color:#ddd;
+    font-size: 18px;
+  }
+  .el-icon-setting{
+    color:#ddd;
+  }
+
 </style>
